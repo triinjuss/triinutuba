@@ -16,8 +16,6 @@ new Vue({
         <template v-slot:assets>
           <a-assets>
           
-          <!-- <a-asset-item id="skulptuur" src="./assets/models/robot_mees.obj"></a-asset-item>
-            <a-asset-item id="skulptuur-mtl" src="./assets/models/robot_mees.mtl"></a-asset-item> -->
 
             <a-asset-item id="pink" src="./assets/models/pink.obj"></a-asset-item>
             <a-asset-item id="pink-mtl" src="./assets/models/pink.mtl"></a-asset-item>
@@ -25,18 +23,11 @@ new Vue({
           <a-asset-item id="chandelier" src="./assets/models/Artichoke_Lamp.obj"></a-asset-item>
             <a-asset-item id="chandelier-mtl" src="./assets/models/Artichoke_Lamp.mtl"></a-asset-item>
 
-            <!-- spotlambid -->
-            <a-asset-item id="spotlamp" src="./assets/models/ledlamp.obj"></a-asset-item>
-            <a-asset-item id="spotlamp-mtl" src="./assets/models/ledlamp.mtl"></a-asset-item>
-
-            <a-asset-item id="ripplamp" src="./assets/models/ripplamp.obj"></a-asset-item>
-            <a-asset-item id="ripplamp-mtl" src="./assets/models/ripplamp.mtl"></a-asset-item>
-
           </a-assets>
         </template>
 
          <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
-        <!-- <a-entity class="skulptuur" position="2.4 3.95 1.506" scale="0.12 0.09 0" obj-model="obj: #skulptuur; mtl: #skulptuur-mtl"></a-entity>   -->
+    
 
         <a-entity class="pink" position="-1.51 0.18 0" scale="5 5 5" obj-model="obj: #pink; mtl: #pink-mtl"></a-entity>  
         <a-entity class="pink" position=" 1.51  0.18 0" rotation="0 -180 0" scale="5 5 5" obj-model="obj: #pink; mtl: #pink-mtl"></a-entity>  
@@ -50,7 +41,7 @@ new Vue({
           <!-- Hetkel on siin tekstid, mis muutuvad nähtavaks, kui vaatad õige asja peale -->
 
           <a-entity id="pilditekst" visible="false" position="0 -0.2 -0.5">
-            <a-text value="autor Triin Juss" width="1" align="center" color="black" />
+            <a-text value="autor Triin Juss" width="0.6" align="center" color="black" />
             <a-plane material="shader: flat" color="grey" opacity="0.3" scale="0.5 0.1 0" />
           </a-entity>
 
@@ -60,15 +51,10 @@ new Vue({
 
         <Ceiling position="0 5 0">
         <a-entity material="color: grey; emissive: grey; emissiveIntensity: " class="chandelier" position="0 -4.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>  
-        <!-- <a-entity material="color: white; emissive: grey; emissiveIntensity: 0.2" class="spotlamp" position="4.55 0.75 0.370" scale="2 2 2" obj-model="obj: #spotlamp"></a-entity>  
-        <a-entity material="color: white; emissive: grey; emissiveIntensity: 0.2" class="ripplamp" position="-2. -1.29 0.141" scale="2 2 2" obj-model="obj: #ripplamp"></a-entity>  
-        <a-entity material="color: white; emissive: grey; emissiveIntensity: 0.2" class="spotlamp" position="2 -1.29 0.141" scale="2 2 2" obj-model="obj: #spotlamp"></a-entity>   -->
+        
 
          <!--valgus reguleerivad jubinad on siin  -->
-
-
-        <a-entity light="type: point; intensity: 0.6; color: #ffffaa; castShadow: true;"  position="0 -1.5 0"></a-entity>
-          <a-entity light="type: ambient; intensity: 0.5; color: #ffffaa"></a-entity>
+       
         </Ceiling>
 
 
@@ -136,7 +122,7 @@ new Vue({
             <a-plane
                 position="-3 0 0"
                 scale="2 3 0"
-                material="src: ./assets/pildid/ouna_pilt.png"
+                material="src: ./assets/pildid/kannud_burn.jpg"
                 shadow="cast: true"
 
                 class="hover"
@@ -149,8 +135,8 @@ new Vue({
 <Wall position="5 0 0" rotation="0 -90 0">
           <a-plane
                 position="-3 0 0"
-                scale="3 2 0"
-                material="src: ./assets/pildid/tintekatoo.png"
+                scale="2 3 0"
+                material="src: ./assets/pildid/portree_mv.jpg"
                 shadow="cast: true"
 
                 class="hover"
@@ -160,7 +146,7 @@ new Vue({
             <a-plane
                 position="0.3 0 0"
                 scale="2 2 0"
-                material="src: ./assets/pildid/joonistus_ymarad_vormid.png"
+                material="src: ./assets/pildid/tintekatoo.png"
                 shadow="cast: true"
 
                 class="hover"
@@ -184,7 +170,8 @@ new Vue({
           <a-plane
                 position="3 0 0"
                 scale="2 3 0"
-                material="src: ./assets/pildid/veski.png"
+                material="src: ./assets/pildid/sinine_vv.jpg"
+                
                 shadow="cast: true"
 
                 class="hover"
@@ -204,7 +191,8 @@ new Vue({
             <a-plane
             position="-3 0 0"
                 scale="2 3 0"
-                material="src: ./assets/pildid/jaapan.png"
+                material="src: ./assets/pildid/veski.png"
+
                 shadow="cast: true"
 
                 class="hover"
